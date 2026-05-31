@@ -4,8 +4,6 @@ Open-source Hong Kong **address** and **lamp post** geocoding service.
 
 Resolve free-text input (Chinese or English addresses, ECC-style case text, or lamp post IDs such as `GD3840`) to coordinates using public government APIs (Lands Department / map.gov.hk). Includes a small browser demo and a JSON API.
 
-> **Note:** This public repository intentionally does **not** include internal-only data sources or deployment details. A separate private deployment may add additional providers.
-
 ## Features
 
 - **Address geocoding** — street-first matching against LandsD location search, with building-name filtering and fallback queries
