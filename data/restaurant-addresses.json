@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "restaurantName": "中環商務午餐測試店",
+    "address": "香港中環皇后大道中15號置地廣場"
+  },
+  {
+    "id": 2,
+    "restaurantName": "IFC 海景測試店",
+    "address": "香港中環金融街8號國際金融中心商場"
+  },
+  {
+    "id": 3,
+    "restaurantName": "太子大廈測試店",
+    "address": "香港中環遮打道10號太子大廈"
+  },
+  {
+    "id": 4,
+    "restaurantName": "灣仔會展測試店",
+    "address": "香港灣仔博覽道1號香港會議展覽中心"
+  },
+  {
+    "id": 5,
+    "restaurantName": "銅鑼灣希慎測試店",
+    "address": "香港銅鑼灣軒尼詩道500號希慎廣場"
+  },
+  {
+    "id": 6,
+    "restaurantName": "銅鑼灣時代測試店",
+    "address": "香港銅鑼灣勿地臣街1號時代廣場"
+  },
+  {
+    "id": 7,
+    "restaurantName": "太古城中心測試店",
+    "address": "香港太古城道18號太古城中心"
+  },
+  {
+    "id": 8,
+    "restaurantName": "康怡廣場測試店",
+    "address": "香港鰂魚涌康山道1號康怡廣場"
+  },
+  {
+    "id": 9,
+    "restaurantName": "北角城市花園測試店",
+    "address": "香港北角電氣道233號城市花園"
+  },
+  {
+    "id": 10,
+    "restaurantName": "香港仔海旁測試店",
+    "address": "香港香港仔中心海旁道南寧街交界香港仔中心"
+  },
+  {
+    "id": 11,
+    "restaurantName": "海港城測試店",
+    "address": "九龍尖沙咀廣東道3至27號海港城"
+  },
+  {
+    "id": 12,
+    "restaurantName": "K11 MUSEA 測試店",
+    "address": "九龍尖沙咀梳士巴利道18號K11 MUSEA"
+  },
+  {
+    "id": 13,
+    "restaurantName": "北京道一號測試店",
+    "address": "九龍尖沙咀北京道1號"
+  },
+  {
+    "id": 14,
+    "restaurantName": "朗豪坊測試店",
+    "address": "九龍旺角亞皆老街8號朗豪坊"
+  },
+  {
+    "id": 15,
+    "restaurantName": "MOKO 測試店",
+    "address": "九龍旺角太子道西193號MOKO新世紀廣場"
+  },
+  {
+    "id": 16,
+    "restaurantName": "又一城測試店",
+    "address": "九龍九龍塘達之路80號又一城"
+  },
+  {
+    "id": 17,
+    "restaurantName": "黃埔天地測試店",
+    "address": "九龍紅磡德安街7號黃埔天地"
+  },
+  {
+    "id": 18,
+    "restaurantName": "德福廣場測試店",
+    "address": "九龍九龍灣偉業街33號德福廣場"
+  },
+  {
+    "id": 19,
+    "restaurantName": "apm 測試店",
+    "address": "九龍觀塘觀塘道418號創紀之城五期apm"
+  },
+  {
+    "id": 20,
+    "restaurantName": "MegaBox 測試店",
+    "address": "九龍九龍灣宏照道38號MegaBox"
+  },
+  {
+    "id": 21,
+    "restaurantName": "新城市廣場測試店",
+    "address": "新界沙田正街18號新城市廣場"
+  },
+  {
+    "id": 22,
+    "restaurantName": "大埔超級城測試店",
+    "address": "新界大埔安邦路8及10號大埔超級城"
+  },
+  {
+    "id": 23,
+    "restaurantName": "荃灣廣場測試店",
+    "address": "新界荃灣大壩街4至30號荃灣廣場"
+  },
+  {
+    "id": 24,
+    "restaurantName": "荃新天地測試店",
+    "address": "新界荃灣楊屋道1號荃新天地"
+  },
+  {
+    "id": 25,
+    "restaurantName": "屯門市廣場測試店",
+    "address": "新界屯門屯順街1號屯門市廣場"
+  },
+  {
+    "id": 26,
+    "restaurantName": "形點一期測試店",
+    "address": "新界元朗朗日路8號形點一期"
+  },
+  {
+    "id": 27,
+    "restaurantName": "東港城測試店",
+    "address": "新界將軍澳重華路8號東港城"
+  },
+  {
+    "id": 28,
+    "restaurantName": "新都會廣場測試店",
+    "address": "新界葵芳興芳路223號新都會廣場"
+  },
+  {
+    "id": 29,
+    "restaurantName": "青衣城測試店",
+    "address": "新界青衣青敬路33號青衣城"
+  },
+  {
+    "id": 30,
+    "restaurantName": "東薈城測試店",
+    "address": "新界東涌達東路20號東薈城名店倉"
+  }
+]

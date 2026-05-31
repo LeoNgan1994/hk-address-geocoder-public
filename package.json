@@ -1,0 +1,39 @@
+{
+  "name": "hk-address-geocoder-public",
+  "version": "1.0.0",
+  "description": "Public Hong Kong address and lamp post geocoding API with a browser demo.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "geocode": "node src/geocode.js",
+    "test": "node src/runCoordinateTest.js",
+    "test:coordinates": "node src/runCoordinateTest.js",
+    "test:extract": "node src/extractor/locationExtractor.test.js",
+    "test:cache": "node src/cache/cacheKeys.test.js",
+    "test:landsd": "node src/clients/landsdRecordPicker.test.js",
+    "test:public-provider": "node src/api/publicProviderNames.test.js",
+    "test:proj": "node src/utils/projConvert.test.js",
+    "test:lamp-landsd": "node src/runLampPostCases.js",
+    "test:outbound": "node --test src/net/outboundFetch.test.js",
+    "docs:lint": "node -e \"require('fs').accessSync('docs/openapi.yaml')\" && echo openapi.yaml OK"
+  },
+  "keywords": [
+    "hong-kong",
+    "geocoding",
+    "address",
+    "landsd",
+    "coordinates"
+  ],
+  "author": "Leo Ngan",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "global-agent": "^3.0.0",
+    "hk-address-parser-lib": "^0.3.0",
+    "pg": "^8.13.3",
+    "swagger-ui-express": "^5.0.1",
+    "undici": "^6.26.0"
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HK Address Geocoder</title>
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <p id="demoEyebrow" class="eyebrow">Leo Ngan</p>
+        <h1 id="demoTitle">HK Address Geocoder</h1>
+        <p id="demoSubtitle" class="subtitle">
+          Hong Kong address and lamp post coordinate lookup demo
+        </p>
+      </div>
+      <div id="headerAside" class="header-aside hidden">
+        <img id="demoMascot" alt="" class="mascot hidden" width="88" height="88" />
+        <p id="demoCredit" class="credit">Powered by Leo Ngan</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel form-panel">
+        <label class="field">
+          <span>API Key</span>
+          <div class="input-with-toggle">
+            <input
+              id="apiKey"
+              type="password"
+              value=""
+              placeholder="Enter your API key (if required)"
+              autocomplete="off"
+            />
+            <button
+              id="toggleApiKey"
+              type="button"
+              class="toggle-visibility"
+              aria-label="Show API key"
+              title="Show API key"
+            >
+              <svg class="icon-eye icon-eye-show" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 5C7 5 2.73 8.11 1 12.5 2.73 16.89 7 20 12 20s9.27-3.11 11-7.5C21.27 8.11 17 5 12 5zm0 11.5a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                  fill="currentColor"
+                />
+              </svg>
+              <svg class="icon-eye icon-eye-hide hidden" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 6.5c2.76 0 5.26 1.12 7.07 2.93l-1.41 1.41A6.96 6.96 0 0 0 12 8.5c-1.93 0-3.68.78-4.95 2.05L5.64 9.14C7.45 7.33 9.95 6.5 12 6.5zm8.36 2.14 1.41 1.41-12.7 12.7-1.41-1.41 2.83-2.83C9.05 16.78 10.48 17 12 17c4.28 0 8.22-2.48 10.36-6.36l2 2.36zM4.93 4.93l1.41 1.41 1.46 1.46C5.48 8.89 3.55 10.5 1 12.5c1.73 4.39 6 7.5 11 7.5 1.52 0 2.95-.22 4.24-.61l1.68 1.68 1.41-1.41L6.34 4.93 4.93 4.93z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </label>
+
+        <fieldset class="field">
+          <legend>Query type</legend>
+          <label id="modeAutoLabel" class="radio">
+            <input type="radio" name="mode" value="auto" checked /> Auto-detect
+          </label>
+          <label id="modeLampLabel" class="radio hidden">
+            <input id="modeLamp" type="radio" name="mode" value="lamp" />
+            Lamp post (e.g. GD3840)
+          </label>
+        </fieldset>
+
+        <label class="field">
+          <span>Input</span>
+          <textarea
+            id="inputText"
+            rows="5"
+            placeholder="Address or lamp post ID…"
+          ></textarea>
+        </label>
+
+        <label class="checkbox">
+          <input id="useCache" type="checkbox" />
+          Use cache (turn off for testing)
+        </label>
+
+        <button id="submitBtn" type="button" class="primary">Resolve coordinates</button>
+        <p id="status" class="status" aria-live="polite"></p>
+      </section>
+
+      <section class="panel result-panel">
+        <div id="map" class="map" role="img" aria-label="Result map"></div>
+        <div id="resultCard" class="result-card hidden">
+          <div class="result-card-header">
+            <h2>Result</h2>
+            <button id="copyCoordsBtn" type="button" class="secondary" disabled>
+              Copy coordinates
+            </button>
+          </div>
+          <dl id="resultList"></dl>
+        </div>
+        <pre id="rawJson" class="raw-json hidden"></pre>
+      </section>
+    </main>
+
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

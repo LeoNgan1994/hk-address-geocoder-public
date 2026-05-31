@@ -1,0 +1,92 @@
+openapi: 3.0.3
+info:
+  title: HK Address Geocoder API
+  description: |
+    Public Hong Kong address and lamp post geocoding API.
+
+    - Set `ENABLE_API_KEY=true` and `ADMIN_API_KEY` to require authentication
+    - Demo UI: `GET /demo`
+    - Interactive docs (admin key when auth enabled): `GET /api-docs`
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3000
+    description: Local
+
+tags:
+  - name: System
+  - name: Geocode
+
+paths:
+  /health:
+    get:
+      tags: [System]
+      summary: Liveness
+      responses:
+        "200":
+          description: OK
+
+  /ready:
+    get:
+      tags: [System]
+      summary: Readiness
+      responses:
+        "200":
+          description: Ready
+        "503":
+          description: Not ready
+
+  /api/v1/capabilities:
+    get:
+      tags: [System]
+      summary: Enabled modules
+      responses:
+        "200":
+          description: Capabilities
+
+  /api/v1/resolve:
+    post:
+      tags: [Geocode]
+      summary: Resolve address or lamp post text to coordinates
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [text]
+              properties:
+                text:
+                  type: string
+                  example: 尖沙咀廣東道5號海洋中心
+                useCache:
+                  type: boolean
+                  default: true
+            examples:
+              address:
+                value:
+                  text: 九龍旺角彌敦道688號
+                  useCache: false
+              lampPost:
+                value:
+                  text: 燈柱 GD3840
+                  useCache: false
+      responses:
+        "200":
+          description: Coordinates found
+        "400":
+          description: Invalid input
+        "401":
+          description: Unauthorized
+        "422":
+          description: No coordinate
+        "502":
+          description: Upstream failure
+
+  /demo/config.json:
+    get:
+      tags: [System]
+      summary: Demo page branding and UI flags
+      responses:
+        "200":
+          description: Demo configuration

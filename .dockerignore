@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+.env
+.git
+.gitignore
+# 只排除 repo 根目錄的執行期快取；勿寫 `cache`，否則會連 src/cache/ 一併排除
+/cache
+logs
+output
+*.md
+.DS_Store
+.cursor
